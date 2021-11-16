@@ -1,31 +1,23 @@
 export function getTitle() {
-  const titleElem = document.querySelector(".title").textContent;
-  console.log(titleElem);
-  return titleElem;
+  const result = document.querySelector(".title").textContent;
+  console.log(result);
+  return result;
 }
-
-getTitle();
 
 export function getDescription() {
-  const desElem = document.querySelector(".about").innerText;
-  console.log(desElem);
-  return desElem;
+  const result = document.querySelector(".about").innerText;
+  console.log(result);
+  return result;
 }
-
-getDescription();
 
 export function getPlans() {
-  const planElem = document.querySelector(".plans").innerHTML;
-  console.log(planElem);
-  return planElem;
+  const result = document.querySelector(".plans").innerHTML;
+  console.log(result);
+  return result;
 }
-
-getPlans();
 
 export function getGoal() {
-  const goalElem = document.querySelector(".goal").outerHTML;
-  console.log(goalElem);
-  return goalElem;
+  const result = document.querySelector(".goal").outerHTML;
+  console.log(result);
+  return result;
 }
-
-getGoal();

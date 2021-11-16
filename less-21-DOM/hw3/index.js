@@ -1,44 +1,31 @@
-export const tasks = [
-  { text: "Buy milk", done: false },
-  { text: "Pick up Tom from airport", done: false },
-  { text: "Visit party", done: false },
-  { text: "Visit doctor", done: true },
-  { text: "Buy meat", done: true },
-];
+export function getTitle() {
+  const titleElem = document.querySelector(".title").textContent;
+  console.log(titleElem);
+  return titleElem;
+}
 
-/**
- * @param {object[]} tasksList
- * @return {undefined}
- */
-const renderTasks = (tasksList) => {
-  console.log(`renderTasks is running`);
+getTitle();
 
-  const listElem = document.querySelector(".list");
+export function getDescription() {
+  const desElem = document.querySelector(".about").innerText;
+  console.log(desElem);
+  return desElem;
+}
 
-  const listItemsElements = tasksList.map((item) => {
-    const listItemElement = document.createElement("li");
-    listItemElement.classList.add("list__item");
+getDescription();
 
-    const checkbox = document.createElement("INPUT");
-    checkbox.setAttribute("type", "checkbox");
-    checkbox.classList.add("list__item-checkbox");
+export function getPlans() {
+  const planElem = document.querySelector(".plans").innerHTML;
+  console.log(planElem);
+  return planElem;
+}
 
-    if (item.done) {
-      checkbox.checked = "true";
-      listItemElement.classList.toggle("list__item_done");
-    }
+getPlans();
 
-    listItemElement.append(checkbox);
-    listItemElement.append(`${item.text}`);
+export function getGoal() {
+  const goalElem = document.querySelector(".plans").outerHTML;
+  console.log(goalElem);
+  return goalElem;
+}
 
-    return listItemElement;
-  });
-
-  listElem.append(...listItemsElements);
-};
-renderTasks(tasks);
-
-document.querySelector(".create-task-btn").onclick = () => {
-  const newValueText = document.querySelector(".task-input").value;
-  tasks.push({ text: newValueText, done: false });
-};
+getGoal();

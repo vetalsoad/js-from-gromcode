@@ -23,7 +23,7 @@ export function getPlans() {
 getPlans();
 
 export function getGoal() {
-  const goalElem = document.querySelector(".plans").outerHTML;
+  const goalElem = document.querySelector(".goal").outerHTML;
   console.log(goalElem);
   return goalElem;
 }

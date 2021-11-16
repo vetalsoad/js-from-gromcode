@@ -1,23 +1,24 @@
-export function getTitle() {
+/* export */ function getTitle() {
   const result = document.querySelector(".title").textContent;
   console.log(result);
   return result;
 }
 
-export function getDescription() {
+/* export  */function getDescription() {
   const result = document.querySelector(".about").innerText;
   console.log(result);
   return result;
 }
 
-export function getPlans() {
+/* export */ function getPlans() {
   const result = document.querySelector(".plans").innerHTML;
   console.log(result);
   return result;
 }
 
-export function getGoal() {
+/* export */ function getGoal() {
   const result = document.querySelector(".goal").outerHTML;
   console.log(result);
   return result;
 }
+ getTitle();

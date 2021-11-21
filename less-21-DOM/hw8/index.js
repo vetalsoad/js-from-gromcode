@@ -1,44 +1,22 @@
-export const tasks = [
-  { text: "Buy milk", done: false },
-  { text: "Pick up Tom from airport", done: false },
-  { text: "Visit party", done: false },
-  { text: "Visit doctor", done: true },
-  { text: "Buy meat", done: true },
-];
 
-/**
- * @param {object[]} tasksList
- * @return {undefined}
- */
-const renderTasks = (tasksList) => {
-  console.log(`renderTasks is running`);
+  function finishList(){
+    const ul = document.querySelector("ul");
+    const special = document.querySelector(".special");
 
-  const listElem = document.querySelector(".list");
+  const liOne = document.createElement("li");
+  liOne.textContent = 1;  
+  ul.prepend(liOne);
 
-  const listItemsElements = tasksList.map((item) => {
-    const listItemElement = document.createElement("li");
-    listItemElement.classList.add("list__item");
+  const liFour = document.createElement("li");
+  liFour.textContent = 4;
+  special.before(liFour);
 
-    const checkbox = document.createElement("INPUT");
-    checkbox.setAttribute("type", "checkbox");
-    checkbox.classList.add("list__item-checkbox");
+  const liSix = document.createElement("li");
+  liSix.textContent = 6;
+  special.after(liSix);
 
-    if (item.done) {
-      checkbox.checked = "true";
-      listItemElement.classList.toggle("list__item_done");
-    }
-
-    listItemElement.append(checkbox);
-    listItemElement.append(`${item.text}`);
-
-    return listItemElement;
-  });
-
-  listElem.append(...listItemsElements);
-};
-renderTasks(tasks);
-
-document.querySelector(".create-task-btn").onclick = () => {
-  const newValueText = document.querySelector(".task-input").value;
-  tasks.push({ text: newValueText, done: false });
-};
+  const liEight = document.createElement("li");
+  liEight.textContent = 8;
+  ul.append(liEight);
+}
+finishList();

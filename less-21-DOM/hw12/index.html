@@ -3,35 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Document</title>
+  <title>Closest element</title>
 </head>
 
 <body>
-  <h1 class="title">Todo List</h1>
-  <main class="todo-list">
-    <div class="actions">
-      <input class="task-input" type="text" />
-      <button class="btn create-task-btn">Create</button>
-    </div>
-    <ul class="list">
-      <!-- Элементы списка должны генерироваться и добавлятся на страницу с помощью JavaScript -->
-      <li class="list__item">
-        <input type="checkbox" class="list__item-checkbox" />
-        Buy milk
-      </li>
-      <!-- ... -->
-      <li class="list__item list__item_done">
-        <input type="checkbox" class="list__item-checkbox" />
-        Visit doctor
-      </li>
-      <!-- ... -->
-    </ul>
-  </main>
+  <div data-section="one" class="box">
+    <span data-number="1"></span>
+    <span data-number="2"></span>
+    <span data-number="3"></span>
+  </div>
+  <div data-section="two" class="box">
+    <span data-number="4"></span>
+    <span data-number="5"></span>
+    <span data-number="6"></span>
+  </div>
+  <script src="index.js" type="module"></script>
 </body>
-
-<script src="index.js" type="module"></script>
 
 </html>

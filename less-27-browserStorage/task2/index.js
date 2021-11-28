@@ -20,16 +20,12 @@ const onCounterChangeHandler = event => {
   localStorage.setItem('counterValue', newValue);
 
   counterValueElem.textContent = newValue;
-
 }
 
 counterElem.addEventListener('click', onCounterChangeHandler);
 
-const onStorageChangeHandler = (event) => {
-
- 
+const onStorageChangeHandler = (event) => { 
   counterValueElem.textContent = event.newValue;
-
 };
 
 window.addEventListener('storage', onStorageChangeHandler);

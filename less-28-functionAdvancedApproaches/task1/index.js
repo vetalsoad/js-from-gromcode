@@ -2,7 +2,7 @@ const calc = initValue => {
   let result = initValue;
 
 
-  const calculator = {
+  export const calculator = {
     add(value) {
       result += value;
       return this;

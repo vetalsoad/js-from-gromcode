@@ -1,8 +1,8 @@
-const calc = initValue => {
+export const calc = initValue => {
   let result = initValue;
 
 
-  export const calculator = {
+   const calculator = {
     add(value) {
       result += value;
       return this;

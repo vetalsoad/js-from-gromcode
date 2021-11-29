@@ -1,4 +1,4 @@
-export const calc = initValue => {
+/* export */ const calc = initValue => {
   let result = initValue;
 
 
@@ -28,6 +28,9 @@ export const calc = initValue => {
 }
 
 
-/* const result = calc(3).add(9).mult(4).div(10).substract(5).result();
+const result = calc(7).add(9).mult(4).div(10).substract(5).result();
 
-console.log(result); */
+console.log(result);
+
+const ten = calc(10).substract(3).result();
+console.log(ten);

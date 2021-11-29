@@ -28,9 +28,9 @@ export const calc = initValue => {
 }
 
 
-const result = calc(7).add(9).mult(4).div(10).substract(5).result();
+/* const result = calc(7).add(9).mult(4).div(10).subtract(5).result();
 
 console.log(result);
 
-const ten = calc(10).substract(3).result();
-console.log(ten);
+const ten = calc(10).subtract(3).result();
+console.log(ten); */

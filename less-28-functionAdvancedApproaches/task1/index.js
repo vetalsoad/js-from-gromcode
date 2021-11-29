@@ -1,4 +1,4 @@
-/* export */ const calc = initValue => {
+export const calc = initValue => {
   let result = initValue;
 
 

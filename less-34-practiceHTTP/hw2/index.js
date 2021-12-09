@@ -7,47 +7,50 @@
 //          то кнопка не работает
 
 const baseUrl = "https://61b0bc0d3c954f001722a5fd.mockapi.io/api/v1/user";
-const button = document.querySelector(".submit-button");
-const emailInput = document.querySelector("#email");
-const userNameInput = document.querySelector('[name="name"]');
-const passwordInput = document.querySelector('[name="password"]');
-const loginForm = document.querySelectorAll(".login-form");
+const emailField = document.querySelector("#email");
+const userNameField = document.querySelector("#name");
+const passwordField = document.querySelector("#password");
 
- const isValidForm = () => {
-  if(
-    emailInput.reportValidity() &&
-    userNameInput.reportValidity() &&
-    passwordInput.reportValidity()
-  ){
-    button.disabled = false;
+const submitButton = document.querySelector(".submit-button");
+const formElement = document.querySelector(".login-form");
+const errorElement = document.querySelector(".error-text");
+
+const isValidForm = () => {
+  
+  if (
+    emailField.reportValidity() &&
+    passwordField.reportValidity() &&
+    userNameField.reportValidity()
+  ) {
+    submitButton.disabled = false;
   }
+  errorElement.textContent = "";
 };
 
-loginForm.addEventListener("input", isValidForm);
-
-/*  function createUser(userData) {   //add user on api
-  return fetch(baseUrl, {
+const sendData = (formData) =>
+  fetch(baseUrl, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json; charset=utf-8",
+      "Content-Type": "application/json;charset=utf-8",
     },
-    body: JSON.stringify(userData),
+    body: JSON.stringify(formData),
   });
-}
 
- function getUserById(userId) {          //get user from api
-  return fetch(`${baseUrl}/${userIdElem}`)
-    .then((responce) => responce.json());
-} 
-
-const onClickHandler = () => {
-  const dataUser = {
-    email: `${emailInput.value}`,
-    userName: `${userNameInput.value}`,
-    password: `${passwordInput.value}`,
-  };
-  console.log(dataUser);
-  createUser(dataUser);
+const submitData = (event) => {
+  event.preventDefault();
+  const formData = Object.fromEntries(new FormData(formElement));
+  console.log(formData);
+  sendData(formData)
+    .then((response) => response.json())
+    .then((userData) => {
+      alert(JSON.stringify(userData));
+      formElement.reset();
+      submitButton.disabled = true;
+    })
+    .catch(() => {
+      errorElement.textContent = "Failed to create user";
+    });
 };
-button.disabled = false;
-button.addEventListener('click', onClickHandler); */
+
+formElement.addEventListener("submit", submitData);
+formElement.addEventListener("input", isValidForm);

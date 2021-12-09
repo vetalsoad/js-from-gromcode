@@ -2,7 +2,7 @@ import { renderTasks } from "./renderer.js";
 
 import { createTask } from "./taskGateway.js";
 
-// eslint-disable-next-line consistent-return
+
 export const onCreateTask = () => {
   const taskTitleInputElem = document.querySelector(".task-input");
 

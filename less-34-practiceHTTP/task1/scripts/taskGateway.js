@@ -1,4 +1,4 @@
-const baseUrl = "https://61af63b83e2aba0017c492a0.mockapi.io/toDoApi/tasksList"; 
+const baseUrl = "https://61b1e667c8d4640017aaf049.mockapi.io/api/v1/todoList"; 
 
 export const getTasksList = () =>
   fetch(baseUrl).then((response) => response.json()); 

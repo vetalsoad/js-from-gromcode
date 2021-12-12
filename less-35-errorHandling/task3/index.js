@@ -62,6 +62,12 @@ const onSearchUserHandler = () => {
     .then((reposList) => {
       renderRepos(reposList);
       hideSpinner();
+    })
+    .catch(err =>{
+      alert(err.massage);
+    })
+    .finally(() =>{
+      hideSpinner();
     });
 };
 

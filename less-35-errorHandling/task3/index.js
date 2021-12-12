@@ -64,7 +64,7 @@ const onSearchUserHandler = () => {
       hideSpinner();
     })
     .catch(err =>{
-      alert(err.massage);
+      alert(err.message);
     })
     .finally(() =>{
       hideSpinner();

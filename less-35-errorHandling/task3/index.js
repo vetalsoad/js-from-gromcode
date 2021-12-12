@@ -37,6 +37,7 @@ const fetchRepositories = (url) => {
 };
 
 const renderRepos = (reposList) => {
+  repoListEl.innerHTML = "";
   const repoListElem = reposList.map(({ name }) => {
 
     const listItemElem = document.createElement("li");

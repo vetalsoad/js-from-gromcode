@@ -28,7 +28,7 @@ const renderUserData = (userData) => {
 };
 
 const fetchRepositories = (url) => {
-  return fetch(url).then((response) => {
+   fetch(url).then((response) => {
     if (response.ok) {
       return response.json();
     }
@@ -66,7 +66,7 @@ const onSearchUserHandler = () => {
     .catch(err =>{
       alert(err.massage);
     })
-    .finally(() =>{
+    .finally(() => {
       hideSpinner();
     });
 };

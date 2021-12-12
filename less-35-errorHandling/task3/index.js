@@ -28,7 +28,7 @@ const renderUserData = (userData) => {
 };
 
 const fetchRepositories = (url) => {
-   fetch(url).then((response) => {
+  return fetch(url).then((response) => {
     if (response.ok) {
       return response.json();
     }
@@ -37,9 +37,8 @@ const fetchRepositories = (url) => {
 };
 
 const renderRepos = (reposList) => {
-  repoListEl.innerHTML = "";
   const repoListElem = reposList.map(({ name }) => {
-
+    console.log(name);
     const listItemElem = document.createElement("li");
     listItemElem.classList.add("repo-list__item");
     listItemElem.textContent = name;
@@ -65,11 +64,11 @@ const onSearchUserHandler = () => {
       hideSpinner();
     })
     .catch(err =>{
-      alert(err.message);
+      alert(err.massage);
     })
-    .finally(() => {
+    .finally(() =>{
       hideSpinner();
-    });
+    })
 };
 
 showUserBtnElem.addEventListener("click", onSearchUserHandler);

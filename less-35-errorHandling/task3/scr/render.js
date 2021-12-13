@@ -15,6 +15,7 @@ export const renderUserData = (userData) => {
 };
 
 export const renderRepos = (reposList) => {
+  repoListEl.innerHTML = "";
   const repoListElem = reposList.map(({ name }) => {
     const listItemElem = document.createElement("li");
     listItemElem.classList.add("repo-list__item");

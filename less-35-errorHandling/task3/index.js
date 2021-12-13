@@ -18,12 +18,12 @@ const onSearchUserHandler = () => {
       renderRepos(reposList);
       hideSpinner();
     })
-    .catch(err =>{
+    .catch((err) => {
       alert(err.message);
     })
-    .finally(() =>{
+    .finally(() => {
       hideSpinner();
-    })
+    });
 };
 
 showUserBtnElem.addEventListener("click", onSearchUserHandler);

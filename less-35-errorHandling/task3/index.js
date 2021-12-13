@@ -6,6 +6,7 @@ const showUserBtnElem = document.querySelector(".name-form__btn");
 const userNameInputElem = document.querySelector(".name-form__input");
 
 const defaultUserAvatar = "https://avatars3.githubusercontent.com/u10001";
+
 const defaultUser = {
   avatar_url: defaultUserAvatar,
   name: "",

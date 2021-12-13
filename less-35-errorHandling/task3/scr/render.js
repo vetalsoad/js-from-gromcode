@@ -3,15 +3,11 @@ const userNameEl = document.querySelector(".user__name");
 const userLocationEl = document.querySelector(".user__location");
 const repoListEl = document.querySelector(".repo-list");
 
-/* userAvatarEl.src = "https://avatars3.githubusercontent.com/u10001";
-userNameEl.innerHTML = '';
-const userLocationEl.innerHTML = ''; */
-
 export const renderUserData = (userData) => {
   const { avatar_url, name, location, repos_url } = userData;
   userAvatarEl.src = avatar_url;
   userNameEl.textContent = name;
-  userLocationEl.textContent = location;
+  userLocationEl.textContent = location ? `from ${location}` : "";
   return repos_url;
 };
 

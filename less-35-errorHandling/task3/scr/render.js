@@ -3,8 +3,9 @@ const userNameEl = document.querySelector(".user__name");
 const userLocationEl = document.querySelector(".user__location");
 const repoListEl = document.querySelector(".repo-list");
 
-const defoultAvatar = "https://avatars3.githubusercontent.com/u10001";
-userAvatarEl.src = defoultAvatar;
+/* userAvatarEl.src = "https://avatars3.githubusercontent.com/u10001";
+userNameEl.innerHTML = '';
+const userLocationEl.innerHTML = ''; */
 
 export const renderUserData = (userData) => {
   const { avatar_url, name, location, repos_url } = userData;
